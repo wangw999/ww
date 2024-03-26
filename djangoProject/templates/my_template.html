@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Template</title>
+    <!-- 引入jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- 嵌入 JavaScript 代码 -->
+    <script>
+        $(function(){
+            onPageLoad();
+        });
+
+        // 当页面加载完成时执行的 JavaScript 代码
+        function onPageLoad() {
+            alert('页面已加载完毕AAAAAAA！');
+        }
+
+       function refresh() {
+            <!--alert('WW！');-->
+            $("#aaa").html("000");
+            $.ajax({
+                url: '/ajax111/',
+                type: 'POST',
+    <!--            dataType: 'json',-->
+                dataType: 'html',
+                data: { data: '你好，服务器！' },
+                success: function(data) {
+                            <!--alert(data.message); // 打印服务器返回的 JSON 数据-->
+    <!--                        $("#aaa").html(data.message);-->
+                            $("#aaa").html(data);
+                            if (data.success) {
+                            // 更新页面或执行其他操作
+                            }
+                        },
+                error: function(xhr, status, error) {
+                        alert(error);
+                }
+            });
+        }
+
+        // 文件下载
+       function downLoad() {
+            $.ajax({
+                url: '/downLoad/',
+                type: 'POST',
+                dataType: 'json',
+                data: { data: '你好，服务器！' , data2: 'download' },
+                success: function(data) {
+                    CommonDownload(data.fileName,data.fileBase64);
+                },
+                error: function(xhr, status, error) {
+                    alert(error);
+                }
+            });
+        }
+
+        // 根据提供的Base64编码字符串和文件名来生成一个文件，并触发浏览器的下载操作
+        function CommonDownload(fileName, base64) {
+            let mimeType = commGetMimeType(fileName);
+            let blob = commonToBlob(base64, mimeType);
+            if(window.navigator && window.navigator.msSaveBlob) {
+                // windows
+                window.navigator.msSaveOrOpenBlob(blob, fileName);
+            } else {
+                // windows以外的浏览器
+                let link = document.createElement('a');
+                link.download = fileName;
+                link.href = URL.createObjectURL(blob);
+                link.click();
+                URL.revokeObjectURL(link.href);
+            }
+        }
+
+        // 将一个Base64编码的字符串转换为一个Blob对象
+        function commonToBlob(base64, mimeType){
+            let bin = atob(base64.replace(/^.*,/, ''));
+            let buffer = new Uint8Array(bin.length);
+            for (let i=0; i < bin.length; i++) {
+                buffer[i] = bin.charCodeAt(i);
+            }
+            let blob = null;
+            try{
+                blob = new Blob([buffer.buffer],{
+                    type: mimeType
+                });
+            } catch(e){
+                 return false;
+            }
+            return blob;
+        }
+
+        // 根据文件扩展名返回相应的MIME类型
+        function commGetMimeType(fileName){
+            let fileExt = fileName.split('.').pop();
+
+            let mimeType = null;
+            switch(fileExt) {
+                case "xlsx":
+                    mimeType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+                    break;
+                case "xls":
+                    mimeType = "application/vnd.ms-excel";
+                    break;
+                case "pdf":
+                    mimeType = "application/pdf";
+                    break;
+                default:
+                    mimeType = "text/plain";
+                    break;
+            }
+            return mimeType;
+        }
+
+       // 文件上传
+       function upLoad() {
+            var uploadFile = $('#fileInput')[0];
+            alert(uploadFile.value);
+
+             // if(uploadFile.value != "") {
+             //     $.each(uploadFile.prop("files"), function() {
+             //        if(this.name.split(".").pop() != "xlsx"){
+             //            alert("只能选择xlsx文件哟！")
+             //           return false;
+             //       }
+             //   });
+             //}
+             // if(uploadFile.prop("files").length > 1){
+             //    alert("只能选择一个文件哟！")
+             //    return false;
+             //}
+
+            var fileInput = $('#fileInput')[0];
+            var file = fileInput.files[0];
+            var formData = new FormData();
+
+            if (file) {
+                formData.append('myFile', file);
+                $.ajax({
+                    url: '/upload/', // Django视图的URL
+                    type: 'POST',
+                    data: formData,
+                    processData: false,  // 告诉jQuery不要去处理发送的数据
+                    contentType: false,  // 告诉jQuery不要去设置Content-Type请求头
+                    success: function(response) {
+                        $('#uploadStatus').text('文件上传成功: ' + response);
+                    },
+                    error: function(xhr, status, error) {
+                        $('#uploadStatus').text('文件上传失败: ' + error);
+                    }
+                });
+            } else {
+                $('#uploadStatus').text('请选择文件');
+            }
+
+            // $.ajax({
+            //     url: '/upLoad/',
+            //     type: 'POST',
+            //     dataType: 'json',
+            //     data: { fileName: fileName , data2: 'download' },
+            //     success: function(data) {
+            //         CommonDownload(data.fileName,data.fileBase64);
+            //     },
+            //     error: function(xhr, status, error) {
+            //         alert(error);
+            //     }
+            // });
+        }
+    </script>
+
+<!--    &lt;!&ndash; 调用 JavaScript 函数 &ndash;&gt;-->
+<!--    <script>-->
+<!--        window.onload = onPageLoad;-->
+<!--    </script>-->
+</head>
+
+<body>
+<h1>Welcome to my website!</h1>
+
+<div id="aaa"></div>
+
+<!-- 使用 Django 模板标签来插入动态内容 -->
+<p>Hello, {{ name }}!</p> <!-- {{ name }} 是一个模板变量，它将被视图中的上下文数据替换 -->
+<p><input type="button" value="test" onclick="refresh()"></p>
+
+<p><label for="fileInput">选择文件:</label><input type="button" value="download" onclick="downLoad()"></p>
+
+<p><input type="file" id="fileInput" name="myFile" onchange="upLoad()" accept=".xlsx;.xls"> </p>
+<div id="uploadStatus"></div>
+<!-- 使用 Django 模板标签来执行逻辑 -->
+{% if greeting %}
+<p>{{ greeting }}</p>
+{% else %}
+<p>No greeting available.</p>
+{% endif %}
+
+<!-- 使用 Django 模板标签来遍历列表 -->
+<ul>
+    {% for item in items %}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>
