@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section action="DELETE" caption="New Section" section_id="861a349b83996e1071f7ad20ceaad31a" sys_domain="global" table="x_1755488_needit_needit" version="3" view="User">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>0</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-05-09 06:42:34</sys_created_on>
+            <sys_id>d21a349b83996e1071f7ad20ceaad346</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_1755488_needit_needit" sys_domain="global" view="7bf03a668319aa1071f7ad20ceaad304">861a349b83996e1071f7ad20ceaad31a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-05-09 06:42:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>1</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-05-09 06:42:34</sys_created_on>
+            <sys_id>da1a349b83996e1071f7ad20ceaad346</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="New Section" display_value="New Section" name="x_1755488_needit_needit" sys_domain="global" view="7bf03a668319aa1071f7ad20ceaad304">861a349b83996e1071f7ad20ceaad31a</sys_ui_section>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-05-09 06:42:34</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="DELETE">
+            <caption>New Section</caption>
+            <header>false</header>
+            <name>x_1755488_needit_needit</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-05-09 06:42:33</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>861a349b83996e1071f7ad20ceaad31a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_1755488_needit_needit</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="NeedIt" source="x_1755488_needit">7ae20c1b83556e1071f7ad20ceaad325</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="NeedIt">7ae20c1b83556e1071f7ad20ceaad325</sys_scope>
+            <sys_update_name>sys_ui_section_861a349b83996e1071f7ad20ceaad31a</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-05-09 06:42:33</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="User" name="User">7bf03a668319aa1071f7ad20ceaad304</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">7ae20c1b83556e1071f7ad20ceaad325</application>
+        <file_path/>
+        <instance_id>3d0c30e8fbd5e6580921f633beefdcfb</instance_id>
+        <instance_name>dev340087</instance_name>
+        <name>sys_ui_section_861a349b83996e1071f7ad20ceaad31a</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update><sys_ui_section caption="New Section" section_id="861a349b83996e1071f7ad20ceaad31a" sys_domain="global" table="x_1755488_needit_needit" version="3" view="User"><sys_ui_element action="INSERT_OR_UPDATE"><element>short_description</element><position>0</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-09 06:42:34</sys_created_on><sys_id>d21a349b83996e1071f7ad20ceaad346</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New Section" display_value="New Section" name="x_1755488_needit_needit" sys_domain="global" view="7bf03a668319aa1071f7ad20ceaad304">861a349b83996e1071f7ad20ceaad31a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-05-09 06:42:34</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_element action="INSERT_OR_UPDATE"><element>description</element><position>1</position><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-09 06:42:34</sys_created_on><sys_id>da1a349b83996e1071f7ad20ceaad346</sys_id><sys_mod_count>0</sys_mod_count><sys_ui_formatter/><sys_ui_section caption="New Section" display_value="New Section" name="x_1755488_needit_needit" sys_domain="global" view="7bf03a668319aa1071f7ad20ceaad304">861a349b83996e1071f7ad20ceaad31a</sys_ui_section><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-05-09 06:42:34</sys_updated_on><sys_user/><type/></sys_ui_element><sys_ui_section action="INSERT_OR_UPDATE"><caption>New Section</caption><header>false</header><name>x_1755488_needit_needit</name><roles/><sys_class_name>sys_ui_section</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2025-05-09 06:42:33</sys_created_on><sys_domain>global</sys_domain><sys_domain_path>/</sys_domain_path><sys_id>861a349b83996e1071f7ad20ceaad31a</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_1755488_needit_needit</sys_name><sys_overrides/><sys_package display_value="NeedIt" source="x_1755488_needit">7ae20c1b83556e1071f7ad20ceaad325</sys_package><sys_policy/><sys_scope display_value="NeedIt">7ae20c1b83556e1071f7ad20ceaad325</sys_scope><sys_update_name>sys_ui_section_861a349b83996e1071f7ad20ceaad31a</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2025-05-09 06:42:33</sys_updated_on><sys_user/><title>false</title><view display_value="User" name="User">7bf03a668319aa1071f7ad20ceaad304</view><view_name/></sys_ui_section></sys_ui_section></record_update>]]></payload>
+        <payload_hash>-101572282</payload_hash>
+        <record_name>NeedIt</record_name>
+        <reverted_from/>
+        <source>8be2805783956e1071f7ad20ceaad387</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-09 06:42:34</sys_created_on>
+        <sys_id>1e1a349b83996e1071f7ad20ceaad348</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>196b3c80cf30000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-09 06:42:34</sys_updated_on>
+        <type>Form Layout</type>
+        <update_guid>921a349b21996e103625b0a62b88cc48</update_guid>
+        <update_guid_history>921a349b21996e103625b0a62b88cc48:-101572282</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-05-09 06:42:49</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_section">sys_ui_section</sys_db_object>
+        <sys_id>3b5b867593fc4e7381d869bc6e42bc61</sys_id>
+        <sys_metadata>861a349b83996e1071f7ad20ceaad31a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>New Section</sys_name>
+        <sys_package display_value="NeedIt" source="x_1755488_needit">7ae20c1b83556e1071f7ad20ceaad325</sys_package>
+        <sys_parent display_value="NeedIt">3373409783956e1071f7ad20ceaad302</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">7ae20c1b83556e1071f7ad20ceaad325</sys_scope>
+        <sys_scope_delete display_value="">511e723e52dc44ecaa3dc4dc6a600c24</sys_scope_delete>
+        <sys_update_name>sys_ui_section_861a349b83996e1071f7ad20ceaad31a</sys_update_name>
+        <sys_update_version display_value="sys_ui_section_861a349b83996e1071f7ad20ceaad31a">1e1a349b83996e1071f7ad20ceaad348</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-05-09 06:42:49</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

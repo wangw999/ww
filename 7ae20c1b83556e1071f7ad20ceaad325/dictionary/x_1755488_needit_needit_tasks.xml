@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="53ee96348369665071f7ad20ceaad385" label="NeedIt Tasks" max_length="40" name="x_1755488_needit_needit_tasks" type="collection">
+        <element label="Assigned to" max_length="40" name="assigned_to" type="string"/>
+        <element choice="1" label="State" max_length="40" name="state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Close Complete" value="3"/>
+                <element inactive_on_update="false" label="Closed Incomplete" value="4"/>
+                <element inactive_on_update="false" label="open" value="1"/>
+                <element inactive_on_update="false" label="Work in Progress" value="2"/>
+            </choice>
+        </element>
+        <element label="Short description" max_length="40" name="short_description" type="string"/>
+        <element label="Due date" max_length="40" name="due_date" type="glide_date_time"/>
+    </element>
+</database>
